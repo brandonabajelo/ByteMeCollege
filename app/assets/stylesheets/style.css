@@ -1,1 +1,16 @@
-h1{color: blue;}
+html * {
+	font-family: Times New Romans;
+	color:White;
+}
+body, * {
+  box-sizing: border-box;
+  background-color: #1A2327;
+}
+body {
+  
+}
+tr, th, tbody, td, a {
+}
+h1{color: White;
+	text-align: center;
+}
