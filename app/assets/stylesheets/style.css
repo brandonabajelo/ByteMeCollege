@@ -2,15 +2,56 @@ html * {
 	font-family: Times New Romans;
 	color:White;
 }
+
 body, * {
   box-sizing: border-box;
   background-color: #1A2327;
 }
+
 body {
   
 }
+
 tr, th, tbody, td, a {
+	text-decoration: none; /* Eliminates the default text underline for links */
 }
-h1{color: White;
+
+h1 {
+	color: White;
 	text-align: center;
+}
+
+/* Unvisited link */
+a:link {
+  font-family: inherit;
+  color: inherit;
+}
+a:hover, a:hover span {             /* The first 3 lines are needed to eliminate default styling */
+	background-color: transparent;
+    color: #34DDDD;
+    text-decoration: blink;
+    font-weight: bold;
+}
+/* Visited link */
+a:visited {
+  font-family: inherit;
+  color: inherit;
+}
+/* Clicked link */
+a:active {
+  font-family: inherit;
+  color: inherit;
+}
+
+.postButton {
+	background-color: #1A2327;
+    border-color: black;
+    color: #fff;
+    padding: 9px 37px;
+    border-radius: 18px;
+    float: left;
+}
+
+.postButton:hover {
+	border-color:White;
 }
