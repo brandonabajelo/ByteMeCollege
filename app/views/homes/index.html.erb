@@ -1,9 +1,6 @@
-<html>
+<head>
+<%= stylesheet_link_tag "homeStyle.css" %>
 <p id="notice"><%= notice %></p>
-<body>
-
-
-
 
 <ul>
   <li><a class="active" href="#home">Home</a></li>
@@ -19,27 +16,20 @@
   <h1>ByteMeCollege</h1>
 </ul>
 
-
-<table>
   <tbody>
-    <% @posts.each do |post| %>
+    <% @homes.each do |home| %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= home.title %></td>
+        <td><%= home.body %></td>
+        <td><%= link_to 'Show', home %></td>
+        <td><%= link_to 'Edit', edit_home_path(home) %></td>
+        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-</body>
 
-<button class="postButton">
-       <span> <%= link_to 'New Post', new_post_path %> </span>
-    </button>
-
-
-</html>
+<%= link_to 'New Home', new_home_path %>
+</head>

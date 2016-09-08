@@ -1,0 +1,117 @@
+html * {
+
+  font-family: Times New Romans;
+}
+
+body, * {
+  background-color: White;
+}
+
+body {
+  
+}
+
+tr, th, tbody, td, a {
+  text-decoration: none; /* Eliminates the default text underline for links */
+}
+
+h1 {
+  font-size: 21px;
+  background-color: inherit;
+  color: White;
+  text-align: center;
+}
+
+span {
+  
+}
+
+/* Unvisited link */
+a:link {
+  font-family: inherit;
+  color: inherit;
+}
+a:hover, a:hover span {             /* The first 3 lines are needed to eliminate default styling */
+    background-color: transparent;
+    color: Black;
+    text-decoration: blink;
+    font-weight: bold;
+}
+/* Visited link */
+a:visited {
+  font-family: inherit;
+  color: inherit;
+}
+/* Clicked link */
+a:active {
+  font-family: inherit;
+}
+
+.postButton {
+    background-color: inherit;
+    border-color: transparent;
+    color: inherit;
+    padding: 9px 37px;
+    border-radius: 18px;
+    float: right;
+}
+
+.postButton:hover {
+     border-color: #f1c40f;
+     color: Black;
+}
+
+ul {
+    position: static;
+    list-style-type: none;
+    margin: 0;
+    padding: 4px;
+    overflow: hidden;
+    background-color: #3498db;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+   background-color: #f1c40f;
+    color: Black;
+}
+
+li.dropdown {
+    color: inherit;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #EAC67A;
+    min-width: 160px;
+    box-shadow: 10px 8px 16px 0px  rgb(10,10,10);
+}
+
+.dropdown-content a {
+    color: #2980b9;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1c40f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
