@@ -3,15 +3,17 @@
 <body>
 <h1>ByteMeCollege</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+ <div class="dropdown">
+<button onclick="dropDown()" class="dropbtn">Select</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#department">Your Department</a>
+    <a href="#major">Your Major</a>
+    <a href="#className">Class # or name</a>
+  </div>
+</div>
 
+
+<table>
   <tbody>
     <% @posts.each do |post| %>
       <tr>
