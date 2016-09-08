@@ -1,0 +1,18 @@
+rails new ByteMeCollege
+cd ByteMeCollege
+ruby bin/rails generate scaffold Post title:string body:text
+ruby bin/rake  db:migrate
+ruby bin/rails server
+
+sudo apt-get update
+sudo apt install ruby
+sudo apt install ruby
+gem update
+bundle update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+sudo apt-get install ruby-full
+
+git clone https://github.com/brandonabajelo/ByteMeCollege.git
+git add ./
+git commit  -m "Message you want to see near your commit"
+git push
