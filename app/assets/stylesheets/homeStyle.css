@@ -1,6 +1,5 @@
 html * {
 
-  font-family: Times New Romans;
 }
 
 body, * {
@@ -16,14 +15,22 @@ tr, th, tbody, td, a {
 }
 
 h1 {
-  font-size: 21px;
+  float: right;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+  font-weight: 0;
   background-color: inherit;
   color: White;
   text-align: center;
 }
 
 span {
-  
+  float: right;
+  font-family: Calibri;
+  font-size: 35px;
+  font-weight: 100;
+  background-color: inherit;
+  color: White;
 }
 
 /* Unvisited link */
@@ -65,12 +72,13 @@ ul {
     position: static;
     list-style-type: none;
     margin: 0;
-    padding: 4px;
+    padding: 8px;
     overflow: hidden;
     background-color: #3498db;
 }
 
 li {
+    padding: 14px;
     float: left;
 }
 
