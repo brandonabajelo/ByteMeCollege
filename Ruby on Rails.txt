@@ -1,37 +1,31 @@
------------------------------------------Windows Installation---------------------------------------------------
-https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe
+-----------------------------------------Windows Installation----------------------------
+Download/Install-->https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe
 gem install rails
 gem install bundler
-bundle install
 git clone https://github.com/brandonabajelo/ByteMeCollege.git
 cd ByteMeCollege
+bundle install
 ruby bin/rake  db:migrate
 
-https://nodejs.org/dist/v6.5.0/node-v6.5.0-x64.msi
+Download/Install-->https://nodejs.org/dist/v6.5.0/node-v6.5.0-x64.msi
+
 Follow these steps, closely:
 Install it anywhere you want, by default: C:\Program Files\nodejs
 Control Panel -> System -> Advanced system settings -> Environment Variables
 Select PATH and choose to edit it.
 
-* If the PATH variable is empty, change it to this: C:\Users\{YOUR USERNAME HERE}\AppData\Roaming\npm;C:\Program Files\nodejs
 ** If the PATH variable already contains C:\Users\{YOUR USERNAME HERE}\AppData\Roaming\npm, append the following right after: ;C:\Program Files\nodejs
+
+* If the PATH variable is empty, change it to this: C:\Users\{YOUR USERNAME HERE}\AppData\Roaming\npm;C:\Program Files\nodejs
+
 * If the PATH variable contains information, but nothing regarding npm, append this to the end of the PATH: ;C:\Users\{YOUR USERNAME HERE}\AppData\Roaming\npm;C:\Program Files\nodejs
+
 Now that the PATH variable is set correctly, you will still encounter errors. Manually go into the AppData directory and you will find that there is no npm directory inside Roaming. Manually create this directory.
 Re-start the command prompt and npm will now work.
 
------------------------------------------Windows Installation---------------------------------------------------
-C:\RailsInstaller\Ruby2.2.0\lib\ruby\gems\2.2.0\gems\execjs-2.7.0\lib\execjs 
-Open runtimes.rb in Sublime
-Find the section that starts with the line JScript = External Runtime.new(. 
-Replace that section of code with:
-    JScript = ExternalRuntime.new(
-      :name        => "JScript",
-      :command     => "cscript //E:jscript //Nologo",
-      :runner_path => ExecJS.root + "/support/jscript_runner.js",
-      :encoding    => 'UTF-8' # CScript with //U returns UTF-16LE
-    )
+-----------------------------------------Windows Installation----------------------------
 
-
+-------------------------------------------Helpful Commands------------------------------
 rails new ByteMeCollege
 cd ByteMeCollege
 ruby bin/rails generate scaffold Post title:string body:text
@@ -45,10 +39,6 @@ make
 sudo make install
 sudo gem install rails
 
-git config --global user.name "Strap8"
-git config --global user.email "nateinthegame@gmail.com"
-
-
 git clone https://github.com/brandonabajelo/ByteMeCollege.git
 git fetch
 git add ./
@@ -57,3 +47,4 @@ git push
 
 Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( homeStyle.css )` to `config/initializers/assets.rb` and restart your server
+-------------------------------------------Helpful Commands------------------------------
