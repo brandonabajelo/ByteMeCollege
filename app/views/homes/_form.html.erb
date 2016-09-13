@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<htmL>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Links -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro" rel="stylesheet"> 
+  <%= stylesheet_link_tag "homeStyle.css" %>
+  </head>
 <%= form_for(home) do |f| %>
   <% if home.errors.any? %>
     <div id="error_explanation">
@@ -12,6 +22,7 @@
   <% end %>
 
   <div class="field">
+  <h1>Yooo</h1>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
@@ -20,8 +31,13 @@
     <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
+  <div class="field">
+    <h1>yooooooo</h1>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+</htmL>
