@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Links -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro" rel="stylesheet"> 
+  <%= stylesheet_link_tag "homeStyle.css" %>
+    <p id="notice"><%= notice %></p>
+    <!-- End of Links -->
+</head>
+<body>
+<!-- Header -->
+  <h1 class="offscreen">Byte<span>MeCollege</span></h1>
+  
+  <div id="hmenu"> 
+  <%= image_tag("SJSU_Spartan_Yellow.jpg", :class => "style-image") %>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Select</a>
+        <div class="dropdown-content">
+          <a href="#">Your Department</a>
+          <a href="#">Your Major</a>
+          <a href="#">Class # or Name</a>
+        </div>
+      </li>
+    </ul>  
+   <a href="#" class="loginButton">Login</a>
+  </div> 
+
+</body>
+  <tbody>
+    <% @homes.each do |home| %>
+      <tr>
+        <td><%= home.title %></td>
+        <td><%= home.body %></td>
+        <td><%= link_to 'Show', home %></td>
+        <td><%= link_to 'Edit', edit_home_path(home) %></td>
+        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+        </tbody>
+      </table>
+
+    <br>
+
+    <%= link_to 'New Home', new_home_path %>
+
+</html>
