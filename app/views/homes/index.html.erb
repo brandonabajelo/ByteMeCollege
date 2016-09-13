@@ -20,11 +20,12 @@
       <li><a class="active" href="#home">Home</a></li>
       <li><a href="#news">News</a></li>
       <li class="dropdown">
+        <!-- Select drop down menu-->
         <a href="#" class="dropbtn">Select</a>
         <div class="dropdown-content">
-          <a href="#">Your Department</a>
-          <a href="#">Your Major</a>
-          <a href="#">Class # or Name</a>
+        <%= link_to 'Your Department', departments_path %>
+        <%= link_to 'Your Major', majors_path %>
+        <a href="#">Class # or Name</a>
         </div>
       </li>
     </ul>  

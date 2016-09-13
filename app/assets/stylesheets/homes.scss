@@ -21,7 +21,7 @@ span {
 .loginButton{
   text-decoration: none;
   background-color: white;
-  border-radius: 18px;
+  border-radius: 12px;
 }
 
 /* "Select" dropdown menu */
@@ -33,7 +33,9 @@ li.dropdown {
   display: none;
   position: absolute;
 }
-.dropdown-content a:hover {
+.dropdown-content a:hover, .loginButton:hover {
+  color: black;
+  font-weight: 800;
   background-color: #f1c40f;
 }
 
@@ -97,7 +99,7 @@ div#hmenu ul a:visited{
   text-decoration: none; 
   font-weight: bold; 
   font-size: medium; 
-  color: inherit;
+  color: white;
 } 
 
 div#hmenu ul a:active{ 
