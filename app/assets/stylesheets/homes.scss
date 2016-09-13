@@ -1,7 +1,7 @@
-body {
-  font-family: Calibri;
+/* Byte text */
+body{
+  background-color: #F5F5F5; /* White Smoke Color */
 }
-
 h1{
   margin-top: .5em;
   font-size: 36px;
@@ -9,9 +9,11 @@ h1{
   font-family: 'Press Start 2P', cursive;
   float: right;
 }
+
+/* MeCollege text */
 span {
   letter-spacing: 2px;
-  margin-top: -12px;
+  margin-top: -.25em;
   float: right;
   font-family: Calibri;
   font-size: 46px;
@@ -19,15 +21,25 @@ span {
 }
 
 .loginButton{
+  margin: 0;
+  text-align: center;
   text-decoration: none;
-  background-color: white;
+  background-color: #f1c40f; /* Yellow Color */
   border-radius: 12px;
+  color: purple;
 }
 
-/* "Select" dropdown menu */
-li.dropdown {
-  color: black; 
-}
+/* Select Button */
+ul li a.selectBtn{ 
+  font-family: Calibri;
+  padding: .3em .4em .3em .4em; 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: medium; 
+  color: white; 
+  border-radius: 12px;
+  background-color: #f1c40f; /* Yellow Color */
+  }
 
 .dropdown-content {
   display: none;
@@ -36,45 +48,42 @@ li.dropdown {
 .dropdown-content a:hover, .loginButton:hover {
   color: black;
   font-weight: 800;
-  background-color: #f1c40f;
+  background-color: #f1c40f; /* Yellow Color */
 }
 
 .dropdown:hover .dropdown-content {
-  margin: -.1em 3em;
+  margin: -.25em 2.25em;
   display: block;
 }
 
 .dropdown-content a {
-  background-color: #0055A2;
+  background-color: #00569E; /* Dark Blue Color */
   border: solid .01em #999;
-  box-shadow: .1em .1em .1em #999;
+  box-shadow: .1em .1em .1em #F5F5F5; /* White Smoke Color */
   text-decoration: none;
   display: block;
   text-align: left;
 }
-/** "Select" dropdown menu **/
-.offscreen { 
-  position: relative; 
-  top: -8px; 
-} 
 
+/* Navigation bar */
 div#hmenu { 
-  height: 36px;
+  height: 66px;
   margin-top: -1em;
   margin-left: -.5em; 
   padding: .5em 0em .5em .5em; 
   background: inherit; 
-  width: 108%; 
-  background-color: #00569E;
+  width: 110%; 
+  background-color: #00569E; /* Dark Blue Color */
 } 
 
+/* Buttons to the left of the Navigation bar */
 div#hmenu ul { 
+  margin-top: -.05em;
   font-family: Calibri;
   font-size: 40px;
   text-align: center;
   float: left;
   list-style: none; 
-  margin-top: -.375em;
   padding: 0; 
 } 
 
@@ -90,7 +99,7 @@ div#hmenu ul a:link{
   text-decoration: none; 
   font-weight: bold; 
   font-size: medium; 
-  color: white;
+  color: #F5F5F5; /* White Smoke Color */
 } 
 
 div#hmenu ul a:visited{ 
@@ -107,7 +116,6 @@ div#hmenu ul a:active{
   padding: .3em .4em .3em .4em; 
   text-decoration: none; 
   font-weight: bold; 
-  font-size: medium; 
   color: inherit; 
 } 
 
@@ -118,18 +126,16 @@ div#hmenu ul a:hover{
   font-weight: 900; 
   font-size: medium; 
   color: black;
-  background-color: #f1c40f;
+  background-color: #f1c40f; /* Yellow Color */
 }
 .style-image{
-  margin-top: -.5em;
-  float: right;
+  margin-top: .25em;
+  float: left;
   position: relative;
   max-width: 50px;
-  max-height: 550px;
+  max-height: 50px;
 }
-/* New Home */
-body {
-}
+/* New Home (we need to delete this eventually) */
 
 p, ol, ul, td {
 }
@@ -141,6 +147,7 @@ pre {
 }
 
 a {
+  text-decoration: none;
   color: #000;
 
   &:visited {
@@ -148,12 +155,13 @@ a {
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: black;
+    background-color: transparent;
   }
 }
 
 th {
+
   padding-bottom: 5px;
 }
 
@@ -164,6 +172,7 @@ td {
 }
 
 div {
+
   &.field, &.actions {
     margin-bottom: 10px;
   }
@@ -206,4 +215,14 @@ div {
 
 label {
   display: block;
+}
+
+/* Edit rudy links by assigning them a class :class=> '' */;
+.newHomeStyle{
+  font: {
+    family: 'Press Start 2P', cursive;
+    weight: bold;
+    size: 1.3em;
+  }
+
 }
