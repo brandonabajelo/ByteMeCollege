@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class DepartmentsControllerTest < ActionDispatch::IntegrationTest
-  
   setup do
     @department = departments(:one)
   end
@@ -46,5 +45,4 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to departments_url
   end
-
 end
