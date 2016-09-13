@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  p_name: MyString
+  p_info: MyText
+
+two:
+  p_name: MyString
+  p_info: MyText
