@@ -15,10 +15,13 @@ class MajorsController < ApplicationController
   # GET /majors/new
   def new
     @major = Major.new
+    
+    @departments = Department.all
   end
 
   # GET /majors/1/edit
   def edit
+    @departments = Department.all
   end
 
   # POST /majors

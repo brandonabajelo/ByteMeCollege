@@ -15,6 +15,12 @@
     <%= f.label :m_name %>
     <%= f.text_field :m_name %>
   </div>
+  
+  <%= fields_for(@departments) do |d| %>
+  <div class="field">
+    <%= collection_select(:department, :id, @departments, :id, :d_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the author of this post'}) %>
+  </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>
