@@ -45,12 +45,11 @@ git add ./
 git commit  -m "Message you want to see near your commit"
 git push
 
-<<<<<<< HEAD
 
 there is a helpful link: https://gorails.com/setup/ubuntu/16.10
 check it out
-=======
 Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( homeStyle.css )` to `config/initializers/assets.rb` and restart your server
 -------------------------------------------Helpful Commands------------------------------
->>>>>>> 7ba8892c9901f64468ac84670b2c9328fcda1073
+
+git push

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class DepartmentsControllerTest < ActionDispatch::IntegrationTest
-<<<<<<< HEAD
+  
   setup do
     @department = departments(:one)
   end
@@ -46,9 +46,5 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to departments_url
   end
-=======
-  # test "the truth" do
-  #   assert true
-  # end
->>>>>>> 7ba8892c9901f64468ac84670b2c9328fcda1073
+
 end

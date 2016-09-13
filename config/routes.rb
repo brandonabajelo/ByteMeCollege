@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 <<<<<<< HEAD
+<<<<<<< HEAD
   resources :majors
   resources :departments
   resources :professors
