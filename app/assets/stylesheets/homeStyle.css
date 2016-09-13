@@ -9,7 +9,7 @@ h1{
   float: right;
 }
 span {
-  margin-top: -12px;
+  margin-top: -10px;
   float: right;
   font-family: Calibri;
   font-size: 46px;
@@ -121,7 +121,7 @@ div#hmenu ul a:hover{
   float: right;
   position: relative;
   max-width: 50px;
-  max-height: 50px;
+  max-height: 550px;
 }
 /* New Home */
 body {
