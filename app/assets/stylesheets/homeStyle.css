@@ -9,16 +9,24 @@ h1{
   float: right;
 }
 span {
+  margin-top: -10px;
   float: right;
   font-family: Calibri;
-  font-size: 34px;
+  font-size: 46px;
   font-weight: 600;
 }
+
+.loginButton{
+  text-decoration: none;
+  background-color: white;
+  border-radius: 18px;
+}
+
 /* "Select" dropdown menu */
 li.dropdown {
-  color: black;
-  
+  color: black; 
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
