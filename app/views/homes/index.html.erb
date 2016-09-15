@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Links -->
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro" rel="stylesheet"> 
   <%= stylesheet_link_tag "homeStyle.css" %>
-    <p id="notice"><%= notice %></p>
     <!-- End of Links -->
 </head>
 <body>
@@ -17,20 +15,21 @@
   <div id="hmenu"> 
   <%= image_tag("SJSU_Spartan_Yellow.jpg", :class => "style-image") %>
     <ul>
-      <li><a href="#" class="loginButton">Log in</a></li>
+      <li><%= link_to 'Home', homes_path, {:class => 'button'} %> </li>
+      <li><a class="button">Log in</a></li>
       <li class="dropdown">
         <!-- Select drop down menu-->
-        <a class="selectBtn">Select</a>
+        <a class="button">Select</a>
         <div class="dropdown-content">
         <%= link_to 'Your Department', departments_path %>
         <%= link_to 'Your Major', majors_path %>
         <a href="#">Class # or Name</a>
         </div>
       </li>
-    </ul>  
+    </ul>   
    
   </div> 
-
+<p id="notice"><%= notice %></p>
 </body>
   <tbody>
     <% @homes.each do |home| %>
