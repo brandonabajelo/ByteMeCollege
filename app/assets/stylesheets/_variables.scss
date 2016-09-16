@@ -1,9 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto:100,300,400,500,700);
 
 /* Color Declarations */
 $white: #FFF;
+$white-smoke: #F5F5F5;
+$yellow: #FFB703;;
+$dark-blue: #00569E;
 $gray: #7F8C8D;
-$primary: #FF0053;
+$primary: blue;
 $secondary: #E80C53;
 $lighter: #D14B3D;
 
@@ -12,6 +15,7 @@ $background: url("../public/wallpapers/wallpaper-5.jpg");
 $transparent: transparent;
 
 /* Font Properties */
+$byte: Press Start 2P;
 $font: Roboto;
 $thin: 100;
 $light: 300;

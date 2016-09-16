@@ -1,7 +1,30 @@
 @import '_variables';
 
 body{
-  background-color: #F5F5F5; /* White Smoke Color */
+background-color: $white-smoke !important;
+}
+
+.navbar-default {
+  background: $dark-blue !important; /* !important overrides default bootstrap style */
+
+  .navbar-nav {
+    >li {
+       >a {
+          color: $yellow !important;
+       }
+    }
+  }
+
+
+.navbar-brand{
+  color: $yellow !important;
+}
+
+.navbar-toggle{
+  background-color: $white-smoke !important;
+}
+.navbar-toggle:hover{
+}
 }
 
 /* Byte text */
@@ -15,198 +38,31 @@ h1{
 
 /* MeCollege text */
 span {
-  color: #F5F5F5; /* White Smoke Color */
-  letter-spacing: 2px;
-  margin-top: -.25em;
-  float: right;
-  font-family: $font;
-  font-size: 46px;
-  font-weight: 600;
-  font: $light 46px/1.5 $font;
+  font-family: $byte 20px;
+  color: $white-smoke;
+  /* font: $light 46px/1.5 $font; */
 }
 
-/* Buttons */
-.button { 
-  font-family: Calibri;
-  padding: .9em 1.2em .9em 1.2em;  
-  text-decoration: none; 
-  font-weight: bold; 
-  font-size: .5em; 
-  color: white; 
-  border-radius: .5em;
-  }
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-}
-.dropdown-content a:hover, .loginButton:hover {
-  color: black;
-  font-weight: 800;
-  background-color: #f1c40f; /* Yellow Color */
-}
-
-.dropdown:hover .dropdown-content {
-  margin: -.1em 5em;
-  display: block;
-  min-width: 5em;
-}
-
-.dropdown-content a {
-  background-color: #00569E; /* Dark Blue Color */
-  border: solid .01em #999;
-  box-shadow: .1em .1em .1em #888aaa;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Navigation bar */
-div#hmenu { 
-  height: 66px; 
-  margin: -.5em -.5em;
-  padding: .5em 0em .5em .5em; 
-  background: inherit; 
-  width: 110%; 
-  background-color: #00569E; /* Dark Blue Color */
-} 
-
-/* Buttons to the left of the Navigation bar */
-div#hmenu ul { 
-  margin-top: -.01em;
-  font-family: Calibri;
-  font-size: 40px;
-  text-align: center;
-  float: left;
-  list-style: none; 
-  padding: 0; 
-} 
-
-div#hmenu ul li { 
-  margin: 0; 
-  padding: 0; 
-  display: inline; 
-} 
-
-div#hmenu ul a:link{ 
-  margin: 0; 
-  padding: .9em 1.2em .9em 1.2em; 
-  text-decoration: none; 
-  font-weight: bold; 
-  font-size: medium; 
-  color: #F5F5F5; /* White Smoke Color */
-} 
-
-div#hmenu ul a:visited{ 
-  margin: 0; 
-  padding: .3em .4em .3em .4em; 
-  text-decoration: none; 
-  font-weight: bold; 
-  font-size: medium; 
-  color: #F5F5F5; /* White Smoke Color */
-} 
-
-div#hmenu ul a:active{ 
-  margin: 0; 
-  text-decoration: none; 
-  font-weight: bold; 
-  color: inherit; 
-} 
-
-div#hmenu ul a:hover{ 
-  margin: 0; 
-  text-decoration: none; 
-  font-weight: 900; 
-  color: black;
-  background-color: #f1c40f; /* Yellow Color */
-}
 .style-image{
-  margin-top: -.4em;
   float: left;
   position: relative;
-  max-width: 5em;
-  max-height: 5em;
+  max-width: 4em;
+  max-height: 4em;
 }
+
+.icon {
+  width: 25px; 
+  height: 25px;
+  object-fit:cover;
+  &:hover {
+    background-color:$gray;
+  }
+}
+
 /* New Home (we need to delete this eventually) */
 
-p, ol, ul, td {
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a {
+a, p, ol, ul, td {
   text-decoration: none;
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: black;
-    background-color: transparent;
-  }
-}
-
-th {
-
-  padding-bottom: 5px;
-}
-
-td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-div {
-
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
-
-#notice {
-  color: green;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0;
-    background-color: #c00;
-    color: #fff;
-  }
-
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
-}
-
-label {
-  display: block;
 }
 
 /* Edit rudy links by assigning them a class :class=> '' */;
@@ -216,5 +72,4 @@ label {
     weight: bold;
     size: 1.3em;
   }
-
 }

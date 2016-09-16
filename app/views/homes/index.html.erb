@@ -4,31 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Links -->
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro" rel="stylesheet"> 
-  <%= stylesheet_link_tag "homeStyle.css" %>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <!-- End of Links -->
 </head>
 <body>
-<!-- Header -->
-  <h1 class="offscreen">Byte<span>MeCollege</span></h1>
-  
-  <div id="hmenu"> 
-  <%= image_tag("SJSU_Spartan_Yellow.jpg", :class => "style-image") %>
-    <ul>
-      <li><%= link_to 'Home', homes_path, {:class => 'button'} %> </li>
-      <li><a class="button">Log in</a></li>
-      <li class="dropdown">
-        <!-- Select drop down menu-->
-        <a class="button">Select</a>
-        <div class="dropdown-content">
-        <%= link_to 'Your Department', departments_path %>
-        <%= link_to 'Your Major', majors_path %>
-        <a href="#">Class # or Name</a>
-        </div>
-      </li>
-    </ul>   
-   
-  </div> 
+<!-- Share buttons from simplesharebuttons.com -->
+<div id="share-buttons">
+    <!-- Email -->
+    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" / class="icon">
+    </a>
+ 
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" / class="icon">
+    </a>
+    
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" / class="icon">
+    </a>
+     
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" / class="icon">
+    </a>
+
+</div>
+<!-- End of share buttons -->
 <p id="notice"><%= notice %></p>
 </body>
   <tbody>
