@@ -2,6 +2,7 @@
 
 body{
 background-color: $white-smoke !important;
+
 }
 /* background */
 .navbar-default {
@@ -42,6 +43,10 @@ background-color: $white-smoke !important;
   font-family: $font;
   font-size: 2em !important;
   color: $white-smoke !important;
+}
+
+.field{
+  
 }
 
 /* Byte text */
@@ -87,11 +92,8 @@ a, p, ol, ul, td {
 
 /* Edit rudy links by assigning them a class :class=> '' */;
 .newHomeStyle{
-  font: {
-    family: 'Press Start 2P', cursive;
-    weight: bold;
-    size: 1.3em;
-  }
+  color: red;
+  font-family: $byte;
 }
 
 #share-buttons a img{
