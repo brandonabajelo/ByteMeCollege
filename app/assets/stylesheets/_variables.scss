@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto:100,300,400,500,700);
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto:100,300,400,500,700');
 
 /* Color Declarations */
 $white: #FFF;
@@ -15,8 +15,8 @@ $background: url("../public/wallpapers/wallpaper-5.jpg");
 $transparent: transparent;
 
 /* Font Properties */
-$byte: Press Start 2P;
-$font: Roboto;
+$byte: 'Press Start 2P', cursive;
+$font: 'Roboto', sans-serif;
 $thin: 100;
 $light: 300;
 $normal: 400;

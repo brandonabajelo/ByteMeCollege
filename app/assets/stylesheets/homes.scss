@@ -9,15 +9,17 @@ background-color: $white-smoke !important;
 
   .navbar-nav {
     >li {
-       >a {
-          color: $yellow !important;
+      >a {
+          
        }
     }
   }
 
 
 .navbar-brand{
-  color: $yellow !important;
+  font-family: $font;
+  font-size: 2em !important;
+  color: $white-smoke !important;
 }
 
 .navbar-toggle{
@@ -28,6 +30,11 @@ background-color: $white-smoke !important;
 }
 
 /* Byte text */
+#span-byte {
+  color: $yellow;
+  font-family: $byte;
+}
+
 h1{
   margin-top: .5em;
   font-size: 36px;
@@ -36,12 +43,8 @@ h1{
   float: right;
 }
 
-/* MeCollege text */
-span {
-  font-family: $byte 20px;
-  color: $white-smoke;
-  /* font: $light 46px/1.5 $font; */
-}
+
+/* Align nav-brand fonts */
 
 .style-image{
   float: left;

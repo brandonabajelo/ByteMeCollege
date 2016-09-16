@@ -2,14 +2,15 @@
 <html>
   <head>
     <title>ByteMeCollege</title>
-    <%= csrf_meta_tags %>
-
+    <!-- Links -->
+    <%= csrf_meta_tags %><%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- End of Links -->
   </head>
 
   <body>
-  <!-- Navigation Bar -->
+<!-- Navigation Bar -->
   <nav class="navbar navbar-default">
 <%= image_tag("SJSU_Spartan.jpg", :class => "style-image") %>
   <div class="container-fluid">
@@ -21,7 +22,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><span>ByteMeCollege</span></a>
+      <a class="navbar-brand" href="#"><span id="span-byte">byte</span>meCollege</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
