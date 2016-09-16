@@ -3,30 +3,45 @@
 body{
 background-color: $white-smoke !important;
 }
-
+/* background */
 .navbar-default {
-  background: $dark-blue !important; /* !important overrides default bootstrap style */
-
+  background: $primary !important; /* !important overrides default bootstrap style */
+  box-shadow: 5px 5px 3px 0px $gray;
+  z-index: 1;
   .navbar-nav {
     >li {
-      >a {
-          
-       }
-    }
-  }
+      >a {color: $yellow !important; }
+      >a:hover {color: $white-smoke !important; background-color: $secondary !important}
+        }
+              }
+.navbar-form {border-color: $yellow !important;} /* active hover */
+}
 
+/* set active item to $secondary color */
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active 
+> a:focus {
+  background-color: $secondary !important;
+          }
 
+/* 3 bar hamburger */
+.icon-bar {
+    background-color: $secondary !important;
+}
+
+/* button */
+  .navbar-toggle{
+  border-color: $white-smoke !important;
+  background-color: $white !important;
+  &:hover { background-color: $white-smoke !important;}
+}
+
+/* title */
 .navbar-brand{
   font-family: $font;
   font-size: 2em !important;
   color: $white-smoke !important;
-}
-
-.navbar-toggle{
-  background-color: $white-smoke !important;
-}
-.navbar-toggle:hover{
-}
 }
 
 /* Byte text */
@@ -63,7 +78,9 @@ h1{
 }
 
 /* New Home (we need to delete this eventually) */
-
+p{
+  text-align: center;
+}
 a, p, ol, ul, td {
   text-decoration: none;
 }
@@ -75,4 +92,16 @@ a, p, ol, ul, td {
     weight: bold;
     size: 1.3em;
   }
+}
+
+#share-buttons a img{
+}
+hr{
+  width: 25% !important;
+  border-top: 2px solid $secondary !important;
+}
+.copyright{
+  color: $secondary;
+  margin: 0 auto;
+  position: relative;
 }
