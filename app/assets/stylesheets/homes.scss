@@ -72,21 +72,53 @@ h1{
   max-width: 4em;
   max-height: 4em;
 }
+.img-center{
+  z-index: -1;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 852px;
+  height: 852px;
+}
+
+.black-box{
+  opacity: .5;
+  position: relative;
+  margin-top: -50px;
+  display: table; 
+  height: 385px;
+  width: 820px;
+  margin: 0 auto;
+  background-color: $secondary;
+}
+
+#share-buttons {
+  display: table-cell;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
 .icon {
-  width: 25px; 
-  height: 25px;
+  background-color: inherit;
+  width: 35px; 
+  height: 35px;
   object-fit:cover;
   &:hover {
-    background-color:$gray;
+    opacity: 0.75;
   }
 }
 
 /* New Home (we need to delete this eventually) */
 p{
+  font-size: 2em;
+  color: $white-smoke;
+  font-weight: 650;
+  font-family: $font;
   text-align: center;
 }
 a, p, ol, ul, td {
+  display: run-in;
   text-decoration: none;
 }
 
@@ -96,8 +128,6 @@ a, p, ol, ul, td {
   font-family: $byte;
 }
 
-#share-buttons a img{
-}
 hr{
   width: 25% !important;
   border-top: 2px solid $secondary !important;
