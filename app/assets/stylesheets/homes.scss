@@ -63,7 +63,6 @@ h1{
   float: right;
 }
 
-
 /* Align nav-brand fonts */
 
 .style-image{
@@ -72,6 +71,7 @@ h1{
   max-width: 4em;
   max-height: 4em;
 }
+
 .img-center{
   z-index: -1;
   position: relative;
@@ -81,8 +81,20 @@ h1{
   height: 852px;
 }
 
+.profile{
+  width: 50%;
+  height: 50%;
+}
+
+.wallpaper{
+  background: $white-smoke url(http://cdn.designmaz.net/wp-content/uploads/2014/10/minimal.png) 
+  repeat fixed;
+  width: auto;
+  height: auto;
+}
+
 .black-box{
-  opacity: .5;
+  opacity: .85;
   position: relative;
   margin-top: -50px;
   display: table; 
