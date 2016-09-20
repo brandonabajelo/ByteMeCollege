@@ -63,6 +63,20 @@ h1{
   float: right;
 }
 
+h3{
+  text-decoration: none !important;
+  color: $yellow !important;
+  font-size: 2em;
+  font-weight: 650;
+  font-family: $font;
+  text-align: right;
+&:hover {
+  text-decoration: none !important;
+  color: $gray !important;
+        }
+}
+
+
 /* Align nav-brand fonts */
 
 .style-image{
@@ -72,7 +86,7 @@ h1{
   max-height: 4em;
 }
 
-.img-center{
+.img-center {
   z-index: -1;
   position: relative;
   display: flex;
@@ -81,16 +95,29 @@ h1{
   height: 852px;
 }
 
-.profile{
-  width: 50%;
-  height: 50%;
+.thumbnail {
+  background-color: inherit !important;
+  border-color: transparent !important;
 }
 
-.wallpaper{
-  background: $white-smoke url(http://cdn.designmaz.net/wp-content/uploads/2014/10/minimal.png) 
-  repeat fixed;
-  width: auto;
-  height: auto;
+.caption{
+  &:hover{
+    color: transparent !important;
+    text-decoration: none !important;
+  }
+}
+
+.profile {
+  display: list-item;
+  padding: 40px;
+  width: 345px;
+  height: 345px;
+}
+
+.wallpaper {
+  background: $yellow url(https://zdkmlg.dm2301.livefilestore.com/y3m1ThLnQ8oY_zI-Ttvi7vZv2j2A64wEPhAzund3zyWOpepycaPJ6im2Mib6yCLmxHJ5cKqHru0wlJ40-tI56E-u0BTQbLMQtItrCKC-YWJOom66yXGzv7-o_-8LJgPK6NIHvVz4tl6QldCtCYrATcof9MGWnNBQfLsDjJinLeNlhE?width=2560&height=1600&cropmode=none) 
+  no-repeat fixed;
+  background-size: cover;
 }
 
 .black-box{
