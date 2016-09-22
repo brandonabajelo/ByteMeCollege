@@ -1,7 +1,7 @@
 <table>
   <thead>
     <tr>
-      <th>D name</th>
+      <th>Departments</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,54 +13,42 @@
         <thead>
           <tr >
             <th class="text-center">
-              #
-            </th>
-            <th class="text-center">
               Name
             </th>
             <th class="text-center">
               Mail
             </th>
             <th class="text-center">
-              Mobile
+              Link
+            </th>
+            <th class="text-center">
+              Action
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr id='addr0'>
-            <td>
-            1
-            </td>
-            <td>
-            <input type="text" name='name0'  placeholder='Name' class="form-control"/>
-            </td>
-            <td>
-            <input type="text" name='mail0' placeholder='Mail' class="form-control"/>
-            </td>
-            <td>
-            <input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>
-            </td>
-          </tr>
-                    <tr id='addr1'></tr>
+        <% @departments.each do |department| %>
+      <tr>
+        <td><%= department.d_name %></td>
+        <td><%= department.link %></td>
+        <td><%= link_to 'Show', department, {:class => 'pull-right btn btn-default'} %></td>
+        <td><%= link_to 'Edit', edit_department_path(department), {:class => 'pull-right btn btn-default'} %></td>
+        <td><%= link_to 'Destroy', department, :id => 'delete_row', :class => 'pull-right btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+          
         </tbody>
       </table>
     </div>
   </div>
-  <a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
+  <%= link_to 'New Department', new_department_path, {:id => 'add_row', :class => 'btn btn-default pull-left'} %>
 </div>
 
   <tbody>
-    <% @departments.each do |department| %>
-      <tr>
-        <td><%= department.d_name %></td>
-        <td><%= link_to 'Show', department %></td>
-        <td><%= link_to 'Edit', edit_department_path(department) %></td>
-        <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Department', new_department_path %>
+

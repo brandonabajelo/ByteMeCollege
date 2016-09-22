@@ -188,7 +188,7 @@ p{
 }
 a, p, ol, ul, td {
   color: $secondary;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Edit rudy links by assigning them a class :class=> '' */;
@@ -201,3 +201,14 @@ hr{
   width: 25% !important;
   border-top: 2px solid $secondary !important;
 }
+
+.glyphicon {
+  background: none;
+  line-height: 1px !important;
+  margin: 25px 10px !important;
+  font-size: 1.75em;
+  &:hover{
+    
+  }
+}
+
