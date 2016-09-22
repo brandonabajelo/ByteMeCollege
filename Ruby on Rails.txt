@@ -23,6 +23,11 @@ Select PATH and choose to edit it.
 Now that the PATH variable is set correctly, you will still encounter errors. Manually go into the AppData directory and you will find that there is no npm directory inside Roaming. Manually create this directory.
 Re-start the command prompt and npm will now work.
 
+sqlite 3 installation 
+https://www.sqlite.org/2016/sqlite-dll-win64-x64-3140200.zip
+install in C:\sqlite
+cd c:\sqlite
+gem install sqlite3-ruby
 -----------------------------------------Windows Installation----------------------------
 
 -------------------------------------------Helpful Commands------------------------------
