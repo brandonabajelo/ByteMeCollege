@@ -35,7 +35,40 @@ background-color: $white !important;
   .navbar-toggle{
   border-color: $white-smoke !important;
   background-color: $white !important;
-  &:hover { background-color: $white-smoke !important;}
+  border: none;
+  
+  &:hover {
+    background: transparent !important;
+    background-color: $white-smoke !important;
+  }
+
+  .icon-bar {
+    width: 22px;
+    transition: all 0.5s;
+  }
+  .top-bar {
+    transform: translate(3px)rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: translate(3px)rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+
+  &.collapsed {
+    .top-bar {
+      transform: rotate(0);      
+    }
+    .middle-bar {
+      opacity: 1;
+    }
+    .bottom-bar {
+      transform: rotate(0);
+    }
+  }
 }
 
 /* title */
