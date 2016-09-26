@@ -233,6 +233,11 @@ small {
   border-color: transparent !important;
 }
 
+.thumbnail img{
+  width: 75%;
+  height: 75%;
+}
+
 .caption{
 
   &:hover{
@@ -273,7 +278,7 @@ small {
   font-size: 1.5em;
   font-weight: 750;
   color: $primary;
-  background-color: $white-smoke !important;
+  background-color: transparent !important;
   vertical-align: center;
   border-color: transparent !important;
 }
