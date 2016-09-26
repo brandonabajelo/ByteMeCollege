@@ -7,7 +7,10 @@ padding-top: 90px !important;
 /* border */
 .navbar-default {
   background-color: #000000 !important;
-  border-color: #ff0000 !important;
+  border-color: $white-smoke !important;
+  -webkit-box-shadow: 0 8px 6px -6px $gray;
+  -moz-box-shadow: 0 8px 6px -6px $gray;
+  box-shadow: 0 8px 6px -6px $gray;
 }
 /* title aka brand */
 .navbar-default .navbar-brand {
@@ -40,39 +43,40 @@ padding-top: 90px !important;
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
   color: #f5f5f5 !important;
-  background-color: #ff0000 !important;
+  background-color: $primary !important;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-  background-color: #ff0000 !important;
+  background-color: $primary !important;
 }
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
   color: #f5f5f5 !important;
-  background-color: #ff0000 !important;
+  background-color: $primary !important;
 }
+/* active */
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #f5f5f5 !important;
-  background-color: #ff0000 !important;
+  background-color: $primary !important;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #f5f5f5 !important;
-  background-color: #ff0000 !important;
+  background-color: $primary !important;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ff0000 !important;
+  border-color: $primary !important;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #ff0000 !important;
+  background-color: $white-smoke !important;
 }
 /* hamburger button */
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #ffffff !important;
+  background-color: $primary !important;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -97,7 +101,7 @@ padding-top: 90px !important;
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #f5f5f5 !important;
-    background-color: #ff0000 !important;
+    background-color: $white-smoke !important;
   }
 }
 /* set active item to $secondary color */
