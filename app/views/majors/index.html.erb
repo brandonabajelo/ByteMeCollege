@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>M name</th>
-      <th colspan="3"></th>
+      <th>Major</th>
+      <th>Department</th>
+      <th colspan="2">Actions</th>
     </tr>
   </thead>
 
@@ -14,7 +15,7 @@
     <% @majors.each do |major| %>
       <tr>
         <td><%= major.m_name %></td>
-        <td><%= link_to 'Show', major %></td>
+        <td><%= major.d_name %></td>
         <td><%= link_to 'Edit', edit_major_path(major) %></td>
         <td><%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -24,4 +25,5 @@
 
 <br>
 
+<%= link_to 'New Department', new_department_path %>
 <%= link_to 'New Major', new_major_path %>

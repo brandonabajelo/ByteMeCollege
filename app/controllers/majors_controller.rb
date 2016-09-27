@@ -4,24 +4,26 @@ class MajorsController < ApplicationController
   # GET /majors
   # GET /majors.json
   def index
-    @majors = Major.all
+    @majors = Major.joins(:department).select('majors.id, majors.m_name, departments.d_name')
+                    .order('d_name, m_name')
   end
 
   # GET /majors/1
   # GET /majors/1.json
   def show
+    
   end
 
   # GET /majors/new
   def new
     @major = Major.new
     
-    @departments = Department.all
+    @departments = Department.all.order('d_name')
   end
 
   # GET /majors/1/edit
   def edit
-    @departments = Department.all
+    @departments = Department.all.order('d_name')
   end
 
   # POST /majors
@@ -72,6 +74,6 @@ class MajorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def major_params
-      params.require(:major).permit(:m_name)
+      params.require(:major).permit(:m_name, :department_id)
     end
 end
