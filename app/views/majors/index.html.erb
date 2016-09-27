@@ -1,29 +1,50 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Majors</h1>
-
 <table>
   <thead>
     <tr>
-      <th>Major</th>
-      <th>Department</th>
-      <th colspan="2">Actions</th>
+      <h1 class="pull-left">Departments</h1>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @majors.each do |major| %>
-      <tr>
-        <td><%= major.m_name %></td>
-        <td><%= major.d_name %></td>
-        <td><%= link_to 'Edit', edit_major_path(major) %></td>
-        <td><%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <div class="container">
+      <div class="row clearfix">
+        <div class="col-md-12 column">
+          <table class="table table-bordered table-hover" id="tab_logic">
+            <thead>
+              <tr >
+                <th class="text-center">
+                  Major Name
+                </th>
+                <th class="text-center">
+                  Department Name
+                </th>
+                <th class="text-center">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @majors.each do |major| %>
+                <tr>
+                  <td><div class="text-center"><%= major.m_name %></div></td>
+                  <td><div class="text-center"><%= major.d_name %></div></td>
+                  <td>
+                    <div class="text-center">
+                      <%= link_to 'Edit', edit_major_path(major), {:class => ' btn btn-default'} %>
+                      <%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'pull-right btn btn-default' %>
+                    </div>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <%= link_to 'New Department', new_department_path, {:id => 'add_row', :class => 'btn btn-default'} %>
+      <%= link_to 'New Major', new_major_path, {:id => 'add_row', :class => 'btn btn-default'} %>
+    </div>
+  <br>
+  <%= link_to '', root_path, {:class => 'glyphicon glyphicon-circle-arrow-left'} %></br>
 </table>
 
 <br>
-
-<%= link_to 'New Department', new_department_path %>
-<%= link_to 'New Major', new_major_path %>

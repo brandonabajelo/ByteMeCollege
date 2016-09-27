@@ -25,31 +25,35 @@
         </thead>
         <tbody>
         <% @departments.each do |department| %>
-      <tr>
-<!-- <<<<<<< HEAD
-        <td><%= department.d_name %></td>
-        <td><%= link_to 'Edit', edit_department_path(department) %></td>
-        <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-======= -->
-        <!-- Name -->
-        <td><div class="text-center"><%= department.d_name %></div></td>
-        <!-- Website Link -->
-        <td><div class="text-center">
-        <a href="<%= department.link %>" class="btn btn-default" target="_blank">Link</a></div></td>
-        <!-- Show -->
-        <td><div class="text-center"><%= link_to 'Show', department, {:class => 'pull-left btn btn-default'} %>
-        <!-- Edit -->
-            <%= link_to 'Edit', edit_department_path(department), {:class => ' btn btn-default'} %>
-        <!-- Destory -->
-            <%= link_to 'Destroy', department, :id => 'delete_row', :class => 'pull-right btn btn-default', 
-      </tr>
-    <% end %>
-          
+        <tr>
+          <!-- Name -->
+          <td><div class="text-center"><%= department.d_name %></div></td>
+          <!-- Website Link -->
+          <td>
+            <div class="text-center">
+              <a href="<%= department.link %>" class="btn btn-default" target="_blank">Link</a>
+            </div>
+          </td>
+          <!-- Show -->
+          <td>
+            <div class="text-center">
+              <!-- Show 
+              <%= link_to 'Show', department, {:class => 'pull-left btn btn-default'} %>
+              -->
+              <!-- Edit -->
+              <%= link_to 'Edit', edit_department_path(department), {:class => ' btn btn-default'} %>
+              <!-- Destory -->
+              <%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'pull-right btn btn-default' %>
+            </div>
+          </td>
+        </tr>
+        <% end %>    
         </tbody>
       </table>
     </div>
   </div>
   <%= link_to 'New Department', new_department_path, {:id => 'add_row', :class => 'btn btn-default'} %>
+  <%= link_to 'New Major', new_major_path, {:id => 'add_row', :class => 'btn btn-default'} %>
 </div>
 <br>
 <%= link_to '', root_path, {:class => 'glyphicon glyphicon-circle-arrow-left'} %></br>
