@@ -40,9 +40,9 @@
             <li><%= link_to 'Your Department', departments_path %></li>
         <li><%= link_to 'Your Major', majors_path %></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="http://www.sjsu.edu/" target="_blank">SJSU</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><%= link_to 'About Us', new_home_path, {:id => 'add_row', :class => ''} %></li>
           </ul>
         </li>
       </ul>
@@ -58,7 +58,8 @@
 </nav>
  <!-- End of Navigation Bar -->
     <%= yield %>
-
+<hr></hr>
+<br>
     <!-- Share buttons from simplesharebuttons.com -->
 <div class="center-block">
     <!-- Email -->
@@ -83,8 +84,8 @@
 
 </div>
 <!-- End of share buttons -->
-
-<hr class="center-block"></hr>
+<br>
+<br>
 <!-- Copyright -->
 <p class="pull-left">&copy; 2016 ByteMe<p>
  

@@ -18,11 +18,18 @@ toggle between hiding and showing the dropdown content */
 });
 
 // Add slideDown animation to dropdown
-$('.dropdown').on('show.bs.dropdown', function(e){
-  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-});
+    $(function(){
+    $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            });
+    });
 
-// Add slideUp animation to dropdown
-$('.dropdown').on('hide.bs.dropdown', function(e){
-  $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-});
+    
