@@ -14,10 +14,9 @@ toggle between hiding and showing the dropdown content */
 		 i--;
 		 }
 	 });
-
 });
 
-// Add slideDown animation to dropdown
+/* Add slideDown animation to dropdown */
 $(document).ready(function(){
     $(".dropdown").hover(            
         function() {
@@ -29,5 +28,4 @@ $(document).ready(function(){
             $(this).toggleClass('open');       
         }
     );
-});
-    
+});  
