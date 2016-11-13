@@ -1,12 +1,8 @@
 @import '_variables';
 
-body, * {
-  box-sizing: border-box;
-  background-color: #1A2327;
-}
-
 body {
-  font-family: Helvetica, Arial, sans-serif;
+	box-sizing: border-box;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 span{color:#B4DCEC; 
@@ -19,7 +15,6 @@ span{color:#B4DCEC;
   margin: 0 auto;
   margin-bottom: 2em;
 }
-h1{color:white;}
 h2{}
 /*Format fieldset*/
 .survey-fieldset {
@@ -42,17 +37,18 @@ h2{}
   margin: 0;
   padding: .5em;
   color: white;
-  background-color:black;
+  background-color: $secondary;
 }
 
 /* Survey formatting */
 
 .main-form fieldset {
-  margin-bottom: 3em;
+	margin-bottom: 3em;
 }
 
 .main-form {
-  padding: 1.3em;
+	background-color: $black !important;
+	padding: 1.3em;
 }
 
 .main-form .main-input {
@@ -102,6 +98,7 @@ h2{}
 }
 
 .profile-table td {
+	background-color: $black;
   padding: .5rem;
 }
 

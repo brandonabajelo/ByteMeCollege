@@ -6,7 +6,7 @@ padding-top: 90px !important;
 }
 /* border */
 .navbar-default {
-  background-color: #000000 !important;
+  background-color: $black !important;
   border-color: $white-smoke !important;
   -webkit-box-shadow: 0 8px 6px -6px $gray;
   -moz-box-shadow: 0 8px 6px -6px $gray;
@@ -202,7 +202,7 @@ padding-top: 90px !important;
 h1{
   margin-top: .5em;
   font-size: 36px;
-  color: #F5F5F5; /* White Smoke Color */
+  color: $white-smoke;
   font-family: $font;
   float: right;
 }
@@ -356,6 +356,5 @@ hr{
   margin: 25px 10px !important;
   font-size: 3em;
   &:hover{
-    
   }
 }
