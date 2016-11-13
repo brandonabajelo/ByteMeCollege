@@ -1,0 +1,162 @@
+<%= form_for(student) do |f| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <h1 style="text-align: center">Account Creation</h1>
+  
+  <form id="survey-form" class="main-form" action="mailto:myoldemailname@gmail.com" method="post"
+        enctype="multipart/form-data">
+
+    <!-- Biography Survey using a table for formatting -->
+    <div class="survey-section mat-shadow">
+      <h2 class="sub-header">Profile</h2>
+
+
+      <table class="profile-table">
+        <tbody>
+
+          <!-- Validate user input -->
+          <tr>
+            <td colspan="3">
+              <input class="input" type="hidden" name="_csrf" value="csrfTokenGoesHereFromServer">
+            </td>
+          </tr>
+
+          <!-- Name length and pattern constraints -->
+          <tr>
+            <td colspan="2">
+              <div>
+                <label for="name" class="title">User name</label>
+                <h5 class="sub-title">Numbers(1,2,3...), Letters(a,b,c...), and Whitespace (" ") characters only</h5>
+                <input class="input" type="text" name="name" id="name" placeholder="Kyrais" size=60 maxlength=30
+                       pattern="[a-zA-Z0-9\s]+"
+                       title="Only Numbers, letters(capitalized and lowercase) and whitespace characters are allowed"
+                       tabindex="1"
+                       required>
+              </div>
+              <div>
+                <label for="name" class="title">Password</label>
+                <h5 class="sub-title">Numbers(1,2,3...), Letters(a,b,c...), and Whitespace (" ") characters only</h5>
+                <input class="input" type="password" type="text" name="name" id="name" placeholder="Password784" size=60 maxlength=30
+                       pattern="[a-zA-Z0-9\s]+"
+                       title="Only Numbers, letters(capitalized and lowercase) and whitespace characters are allowed"
+                       tabindex="1"
+                       required>
+              </div>
+            </td>
+          </tr>
+          
+          <td>
+            <div>
+              <label for="portrait" class="title">Profile picture</label>
+              <input class="input" type="file" id ="portrait" name="portrait" accept="image/*" tabindex="7">
+            </div>
+          </td>
+
+          <!-- Account email -->
+          <tr>
+            <td colspan="2">
+              <div>
+                <label for="email" class="title">Email</label>
+                <h2 class="sub-title">Include a "@" symbol</h2>
+                <input class="input" type="email" name="email" id="email" placeholder="GameForLife@mail.com" size=60 maxlength=100 tabindex="2" required>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Birthday input -->
+          <tr>
+            <td>
+              <div>
+                <label for="birthday" class="title">Birthday</label>
+                <!-- Datetime input restricted to users whose birthday is in this year -->
+                <h2 class="sub-title">Can't have a birthday within the year</h2>
+                <input class="input" name="birthday" type="datetime-local" id="birthday"
+                       tabindex="3">
+              </div>
+            </td>
+
+            <!-- Age input restricted to a 1-123 range -->
+            <td>
+              <div>
+                <label for="age" class="title">Age</label>
+                <h2 class="sub-title">1-123</h2>
+                <input class="sub-title" id="age" name="age" type="number" placeholder="18"
+                       tabindex="6" min="1" max="123">
+              </div>
+            </td>
+          </tr>
+
+          <td>
+          <div>
+            <label for="security-question" class="title">Security question</label>
+            <select id="security-question" name="security-question" class ="sub-title" tabindex="8">
+              <option value="1">What was the name of the street you grew up on?</option>
+              <option value="2">What is your mother's maiden name?</option>
+              <option value="3">What was the year and make of your first car?</option>
+              <option value="4">Where did you meet your significant other?</option>
+            </select>
+            <input class="input" type="email" name="email" id="email" placeholder="West E Street" size=60 maxlength=100 tabindex="2" required>
+          </div>
+          </td>
+
+
+          <!-- Gender input -->
+          <tr>
+            <td>
+              <div class="gender-inputs">
+                <label for="gender" class="title">Gender</label>
+                <span>Male</span> <input class="gender-input" id="gender" type="radio" name="gender" value="Male" checked
+                                         tabindex="4">
+                <span>Female</span> <input class="gender-input" type="radio" name="gender" value="Female" tabindex="5">
+              </div>
+            </td>
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :biography %>
+    <%= f.text_area :biography %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
