@@ -4,7 +4,9 @@ body {
 	box-sizing: border-box;
 	font-family: Helvetica, Arial, sans-serif;
 }
-
+label {
+  color: $yellow;
+}
 span{color:#B4DCEC; 
   font-size: 1.35em;}
 
