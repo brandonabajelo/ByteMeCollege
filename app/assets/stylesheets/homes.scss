@@ -358,3 +358,13 @@ hr{
     color: $yellow;
   }
 }
+
+.btn-primary {
+  border-color: $transparent !important;
+  background-color: $primary !important;
+}
+
+.black { /* For glypicon */
+  text-decoration: none !important;
+  color: $black !important;
+}

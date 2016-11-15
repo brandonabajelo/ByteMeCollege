@@ -30,8 +30,8 @@
                   <td><div class="text-center"><%= major.d_name %></div></td>
                   <td>
                     <div class="text-center">
-                      <%= link_to 'Edit', edit_major_path(major), {:class => ' btn btn-default'} %>
-                      <%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'pull-right btn btn-default' %>
+                      <%= link_to 'Edit', edit_major_path(major), {:class => ' btn btn-primary'} %>
+                      <%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'pull-right btn btn-primary' %>
                     </div>
                   </td>
                 </tr>
@@ -44,7 +44,7 @@
       <%= link_to 'New Major', new_major_path, {:id => 'add_row', :class => 'btn btn-primary'} %>
     </div>
   <br>
-  <%= link_to '', root_path, {:class => 'glyphicon glyphicon-circle-arrow-left'} %></br>
+  <%= link_to '', root_path, {:class => 'black glyphicon glyphicon-circle-arrow-left'} %></br>
 </table>
 
 <br>
