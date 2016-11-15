@@ -17,23 +17,53 @@
   <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
 
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <table class="table table-bordered table-hover" id="tab_logic">
+
+<thead>
+          <tr >
+            <th class="black text-center">
+              First name
+            </th>
+            <th class="black text-center">
+              Last name
+            </th>
+            <th class="black text-center">
+              Username
+            </th>
+            <th class="black text-center">
+              Password
+            </th>
+            <th class="black text-center">
+              Email address
+            </th>
+            <th class="black text-center">
+              Biography
+            </th>
+          </tr>
+        </thead>
+
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.first_name %></td>
-        <td><%= student.last_name %></td>
-        <td><%= student.user_name %></td>
-        <td><%= student.password %></td>
-        <td><%= student.email %></td>
-        <td><%= student.biography %></td>
-        <td><%= link_to 'Show', student, :class => 'btn btn-primary' %></td>
-        <td><%= link_to 'Edit', edit_student_path(student), :class => 'btn btn-primary' %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-primary' %></td>
+        <td><div class="text-center"><%= student.first_name %></div></td>
+        <td><div class="text-center"><%= student.last_name %></div></td>
+        <td><div class="text-center"><%= student.user_name %></div></td>
+        <td><div class="text-center"><%= student.password %></div></td>
+        <td><div class="text-center"><%= student.email %></div></td>
+        <td><div class="text-center"><%= student.biography %></div></td>
+        <td><div class="text-center"><%= link_to 'Show', student, :class => 'btn btn-primary' %></div></td>
+        <td><div class="text-center"><%= link_to 'Edit', edit_student_path(student), :class => 'btn btn-primary' %></div></td>
+        <td><div class="text-center"><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-primary' %></div></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+    </div>
+  </div>
+</div>
 <br>
 <%= link_to 'Create', new_student_path, :class => 'btn btn-primary' %>
 
