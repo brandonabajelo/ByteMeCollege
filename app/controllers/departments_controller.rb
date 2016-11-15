@@ -28,6 +28,7 @@ class DepartmentsController < ApplicationController
 
     respond_to do |format|
       if @department.save
+        flash[:success] = "Department was successfully created."
         format.html { redirect_to @department, notice: 'Department was successfully created.' }
         format.json { render :show, status: :created, location: @department }
       else

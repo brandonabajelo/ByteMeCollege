@@ -33,6 +33,7 @@ class MajorsController < ApplicationController
 
     respond_to do |format|
       if @major.save
+        flash[:success] = "Major was successfully created."
         format.html { redirect_to @major, notice: 'Major was successfully created.' }
         format.json { render :show, status: :created, location: @major }
       else

@@ -3,6 +3,6 @@ class Major < ApplicationRecord
 	attr_accessor :mNname
 
 
-	validates :m_name, :presence => true
-	validates :department_id, :presence => true
+	validates :m_name, presence: true, length: { minimum: 8}
+	validates :department_id, presence: true
 end

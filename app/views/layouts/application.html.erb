@@ -55,6 +55,13 @@
   </div><!-- /.container-fluid -->
 </nav>
  <!-- End of Navigation Bar -->
+ <!-- a message that appears on the subsequent page and then disappears upon visiting a second page or on page reload. -->
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <!-- simular to:
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+      -->
+    <% end %>
     <%= yield %>
     <hr></hr>
 <br>

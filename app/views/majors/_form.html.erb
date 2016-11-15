@@ -19,5 +19,5 @@
     <%= collection_select(:major, :department_id, @departments, :id, :d_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the department of this post'}) %>
   </div>
   
-  <%= f.submit 'Create Major', :class => 'btn btn-default' %>
+  <%= f.submit 'Create Major', :class => 'btn btn-primary' %>
 <% end %>
