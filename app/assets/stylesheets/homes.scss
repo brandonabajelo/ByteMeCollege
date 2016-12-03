@@ -339,14 +339,7 @@ p{
   font-family: $font;
   text-align: center;
 }
-a, p, ol, ul, td {
-  color: $secondary;
-  text-decoration: none !important;
-}
 
-a:hover img {
-  border: 0;
-}
 
 /* Edit rudy links by assigning them a class :class=> '' */;
 .newHomeStyle{
@@ -356,14 +349,4 @@ a:hover img {
 
 hr{
   border-top: 2px solid $secondary !important;
-}
-
-.glyphicon {
-  background: none;
-  line-height: 1px !important;
-  margin: 25px 10px !important;
-  font-size: 3em;
-  &:hover{
-    color: $yellow;
-  }
 }
