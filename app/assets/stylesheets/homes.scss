@@ -262,6 +262,10 @@ small {
   border-color: transparent !important;
 }
 
+.img-thumbnail{
+  border-color: transparent !important;
+}
+
 .thumbnail img{
   width: 75%;
   height: 75%;
@@ -338,6 +342,10 @@ p{
 a, p, ol, ul, td {
   color: $secondary;
   text-decoration: none !important;
+}
+
+a:hover img {
+  border: 0;
 }
 
 /* Edit rudy links by assigning them a class :class=> '' */;

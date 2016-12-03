@@ -138,3 +138,11 @@ h2{}
   color: #B4DCEC;
   background-color: #534C49;
 }
+a{
+
+  text-decoration: none !important;
+  &hover{
+    text-decoration: none !important;
+    background-color: transparent !important;
+  }
+}
