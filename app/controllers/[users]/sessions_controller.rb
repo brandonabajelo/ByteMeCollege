@@ -1,4 +1,10 @@
-class [students]::SessionsController < Devise::SessionsController
+class [users]::SessionsController < Devise::SessionsController
+    def create
+    super do |resource|
+      BackgroundWorker.trigger(resource)
+    end
+  end
+end
 # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
