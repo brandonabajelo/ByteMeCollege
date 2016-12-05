@@ -1,18 +1,8 @@
 @import '_variables';
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 33px;
-}
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 33px;
+
+p{
+  color: $primary !important;
 }
 
 pre {
@@ -21,7 +11,7 @@ pre {
   font-size: 11px;
 }
 
-a, p, ol, ul, td {
+a, ol, ul, td {
   color: inherit !important;
   text-decoration: none !important;
 }

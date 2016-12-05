@@ -16,7 +16,20 @@
               <input class="input" type="hidden" name="_csrf" value="csrfTokenGoesHereFromServer">
             </td>
           </tr>
-
+          <tr>
+            <td colspan="2">
+            <div class="form-group">
+              <%= f.label :first_name %>
+              <%= f.text_field :first_name, :class => "form-control" %>
+              </div>
+              </tr>
+          <tr>
+            <td colspan="2">
+            <div class="form-group">
+              <%= f.label :last_name %>
+              <%= f.text_field :last_name, :class => "form-control" %>
+              </div>
+              </tr>
           <tr>
             <td colspan="2">
             <div class="form-group">
@@ -42,6 +55,14 @@
             </td>
             </div>
           </tr>
+           <tr>
+            <td colspan="2">
+            <div class="form-group">
+            <%= f.label :biography %>
+            <%= f.text_area :biography, :class => "form-control" %>
+            </td>
+            </div>
+          </tr>
           <!-- Submit -->
           <tr>
             <td colspan="2">
@@ -57,7 +78,9 @@
             <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %>
             </td>
           </tr>
-
+          <td colspan="2">
+            <%= render "devise/shared/links" %>
+            </td>
         </tbody>
       </table>
     </div>
@@ -65,5 +88,3 @@
 
 
 <% end %>
-
-<%= render "devise/shared/links" %>
