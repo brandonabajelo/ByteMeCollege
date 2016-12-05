@@ -18,9 +18,6 @@
             <th class="text-center">
               Website Link
             </th>
-            <th class="text-center">
-              Actions
-            </th>
           </tr>
         </thead>
         <tbody>
@@ -34,17 +31,7 @@
               <a href="<%= department.link %>" class="btn btn-default" target="_blank">Link</a>
             </div>
           </td>
-          <td>
-            <div class="text-center">
-              <!-- Show -->
-              <%= link_to 'Show', department, {:class => 'pull-left btn btn-default'} %>
-            
-              <!-- Edit -->
-              <%= link_to 'Edit', edit_department_path(department), {:class => ' btn btn-default'} %>
-              <!-- Destory -->
-              <%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'pull-right btn btn-default' %>
-            </div>
-          </td>
+
         </tr>
         <% end %>    
         </tbody>
