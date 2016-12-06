@@ -15,14 +15,10 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
-
-    @departments = Department.all.order('d_name');
   end
 
   # GET /courses/1/edit
   def edit
-
-    @departments = Department.all.order('d_name');
   end
 
   # POST /courses
