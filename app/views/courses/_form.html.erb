@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :department_id %>
-    <%= f.number_field :department_id %>
+    <%= collection_select(:course, :department_id, @departments, :id, :d_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the department of this course'}) %>
   </div>
 
   <div class="field">
