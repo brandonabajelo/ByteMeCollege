@@ -176,7 +176,6 @@ GEM
     websocket-extensions (0.1.2)
 
 PLATFORMS
-  ruby
   x86-mingw32
 
 DEPENDENCIES
