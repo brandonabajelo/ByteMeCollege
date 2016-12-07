@@ -43,7 +43,7 @@
         </li>
       </ul>
       <form class="navbar-form navbar-right">
-      <% if !user_signed_in? %>    
+           <% if !user_signed_in? %>    
         <%= link_to('Login', new_user_session_path, :class => 'btn btn-default') %>
        <% end %>
        <% if user_signed_in? %>
