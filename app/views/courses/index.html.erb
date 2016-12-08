@@ -66,7 +66,7 @@
           <%= course.units %>
             </div>
           </td>
-          <td><%= link_to 'Review', reviews_path, {:id => 'add_row', :class => 'btn btn-default'} %></td>
+          <td><%= link_to 'Review', new_review_path(), {:id => 'add_row', :class => 'btn btn-default'} %></td>
         <td><%= link_to 'Edit', edit_course_path(course), {:id => 'add_row', :class => 'btn btn-default'} %></td>
         <td><%= link_to 'Destroy', course, :id => 'add_row', :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
