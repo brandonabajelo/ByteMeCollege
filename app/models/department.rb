@@ -4,5 +4,5 @@ class Department < ApplicationRecord
 
 	validates :d_name, :presence => true
 	
-	has_many :majors
+	has_many :courses
 end

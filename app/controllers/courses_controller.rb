@@ -4,7 +4,8 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    @courses = Course.joins(:department).select('courses.*, departments.d_name')
+                    .order('d_name, course_name')
   end
 
   # GET /courses/1

@@ -39,7 +39,7 @@
           <!-- ID -->
           <td>
           <div class="text-center">
-          <%= course.department_id %>
+          <%= course.d_name %>
             </div>
           </td>
           <!-- Name -->
@@ -66,7 +66,7 @@
           <%= course.units %>
             </div>
           </td>
-          <td><%= link_to 'Review', reviews_path, {:id => 'add_row', :class => 'btn btn-default'} %></td>
+          <td><%= link_to 'Reviews', reviews_path(), {:id => 'add_row', :class => 'btn btn-default'} %></td>
         <td><%= link_to 'Edit', edit_course_path(course), {:id => 'add_row', :class => 'btn btn-default'} %></td>
         <td><%= link_to 'Destroy', course, :id => 'add_row', :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
@@ -75,7 +75,9 @@
       </table>
     </div>
   </div>
+  <!--
   <%= link_to 'New Course', new_course_path, {:id => 'add_row', :class => 'btn btn-default'} %>
+  -->
 </div>
 <br>
 <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %></br>

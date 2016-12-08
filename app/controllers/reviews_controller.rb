@@ -10,15 +10,20 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
+    @courses = Course.all.order('course_name')
   end
 
   # GET /reviews/new
   def new
     @review = Review.new
+    
+    @departments = Department.all.order('d_name')
+    @courses = Course.all.order('course_name')
   end
 
   # GET /reviews/1/edit
   def edit
+    @courses = Course.all.order('course_name')
   end
 
   # POST /reviews
@@ -69,6 +74,7 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:course_id, :review_id, :user_id, :review, :thumb_up, :thumb_down)
+      @currentUserId = current_user.id
+      params.require(:review).permit(:course_id, :review_id, :user_id, :review)
     end
 end

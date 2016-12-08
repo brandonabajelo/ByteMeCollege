@@ -10,38 +10,54 @@
       </ul>
     </div>
   <% end %>
+<form id="survey-form" class="main-form">
 
-  <div class="field">
-    <%= f.label :course_id %>
-    <%= f.number_field :course_id %>
-  </div>
+    <div class="survey-section mat-shadow">
+      <h2 class="sub-header">Review</h2>
 
-  <div class="field">
-    <%= f.label :review_id %>
-    <%= f.number_field :review_id %>
-  </div>
+      <table class="profile-table">
+        <tbody>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
-  </div>
+          <!-- Validate user input -->
+          <tr>
+            <td colspan="3">
+              <input class="input" type="hidden" name="_csrf" value="csrfTokenGoesHereFromServer">
+            </td>
+          </tr>
 
-  <div class="field">
-    <%= f.label :review %>
-    <%= f.text_area :review %>
-  </div>
+          <tr>
+            <td colspan="2">
+            <div class="form-group">
+            <%= f.label :course_id %>
+            <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {:class => 'black', include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
+              </div>
+              </tr>
 
-  <div class="field">
-    <%= f.label :thumb_up %>
-    <%= f.number_field :thumb_up %>
-  </div>
+            <td colspan="2">
+              <div class="form-group">
+                  <%= f.label :review %>
+                  <%= f.hidden_field :user_id, :value => current_user.id %>
+                  <%= f.text_area :review, :class => "form-control" %>
+              </div>
 
-  <div class="field">
-    <%= f.label :thumb_down %>
-    <%= f.number_field :thumb_down %>
-  </div>
+          </tr>
+          <!-- Submit -->
+          <tr>
+            <td colspan="2">
+            <div class="actions">
+            <%= f.submit "Create Review", class: 'btn btn-default'  %>
+            </div>
+            </td>
+          </tr>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+                    <!-- Back -->
+           <tr>
+            <td colspan="2">
+            <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
 <% end %>
