@@ -11,32 +11,72 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :department_id %>
-    <%= f.number_field :department_id %>
-  </div>
+<form id="survey-form" class="main-form">
 
-  <div class="field">
-    <%= f.label :course_name %>
-    <%= f.text_field :course_name %>
-  </div>
+    <div class="survey-section mat-shadow">
+      <h2 class="sub-header">Edit Course</h2>
 
-  <div class="field">
-    <%= f.label :overall_rate %>
-    <%= f.text_field :overall_rate %>
-  </div>
+      <table class="profile-table">
+        <tbody>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
+          <!-- Validate user input -->
+          <tr>
+            <td colspan="3">
+              <input class="input" type="hidden" name="_csrf" value="csrfTokenGoesHereFromServer">
+            </td>
+          </tr>
 
-  <div class="field">
-    <%= f.label :units %>
-    <%= f.number_field :units %>
-  </div>
+          <tr>
+            <td colspan="2">
+            <div class="form-group">
+            <%= f.label :department_id %>
+            <%= f.number_field :department_id, :class => "form-control" %>
+              </div>
+              </tr>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+            <td colspan="2">
+              <div class="form-group">
+                  <%= f.label :course_name %>
+                  <%= f.text_field :course_name, :class => "form-control" %>
+              </div>
+
+              <tr>
+            <td colspan="2">
+            <div class="form-group">
+            <%= f.label :overall_rate %>
+            <%= f.text_field :overall_rate, :class => "form-control" %>
+            </td>
+            </div>
+
+            <tr>
+            <td colspan="2">
+            <div class="form-group">
+            <%= f.label :description %>
+            <%= f.text_area :description, class: 'form-control' %>
+            </td>
+            </div>
+
+            <tr>
+            <td colspan="2">
+            <div class="form-group">
+            <%= f.label :units %>
+            <%= f.number_field :units, :class => "form-control" %>
+            </td>
+            </div>
+
+          </tr>
+          <!-- Submit -->
+          <tr>
+            <td colspan="2">
+            <div class="actions">
+            <%= f.submit "Update Course", class: 'btn btn-default'  %>
+            </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </form>
+
 <% end %>
