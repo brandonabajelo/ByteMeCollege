@@ -17,11 +17,8 @@
             <th class="text-center">
               Course
             </th>
-            <th class="text-center">
-              Review
-            </th>
              <th class="text-center">
-              User
+              Author
             </th>
              <th class="text-center">
               Review
@@ -32,7 +29,7 @@
             <th class="text-center">
               Thumbs down
             </th>
-            <th colspan="5" class="text-center">
+            <th colspan="2" class="text-center">
               Action
             </th>
           </tr>
@@ -43,19 +40,13 @@
           <!-- Course -->
           <td>
           <div class="text-center">
-          <%= review.course_id %>
-            </div>
-          </td>
-          <!-- Review-->
-          <td>
-            <div class="text-center">
-              <%= review.review_id %>
+          <%= review.course_name %>
             </div>
           </td>
           <td>
           <!-- User id -->
           <div class="text-center">
-          <%= review.user_id %>
+          <%= review.email %>
             </div>
           </td>
           <td>
@@ -78,25 +69,27 @@
           </td>
 
         <td>
-          <%= link_to 'New Review', new_review_path, {:id => 'add_row', :class => 'btn btn-default'} %> 
+          <%= link_to 'Reply Review', new_review_path(rid: review.id), {:id => 'add_row', :class => 'btn btn-default'} %> 
         </td>
-
-          <td>
-          <%= link_to 'Show', review, {:id => 'add_row', :class => 'btn btn-default'} %>
-          </td>
+      
         <td>
-        <%= link_to 'Edit', edit_review_path(review), {:id => 'add_row', :class => 'btn btn-default'} %>
-          
+          <%= link_to 'Show', review, {:id => 'add_row', :class => 'btn btn-default'} %>
+        </td>
+      <!--
+        <td>
+          <%= link_to 'Edit', edit_review_path(review), {:id => 'add_row', :class => 'btn btn-default'} %>
         </td>
         <td>
         <%= link_to 'Destroy', review, :id => 'add_row', :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %> 
         </td>
+      -->
         </tr>
-        <% end %>    
+        <% end %>
         </tbody>
       </table>
     </div>
   </div>
+  <%= link_to 'Add an new Review', new_review_path(cid: @cid), {:id => 'add_row', :class => 'btn btn-default'} %>
 </div>
 <br>
 <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %></br>

@@ -25,17 +25,11 @@
             </td>
           </tr>
 
-          <tr>
-            <td colspan="2">
-            <div class="form-group">
-            <%= f.label :course_id %>
-            <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {:class => 'black', include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
-              </div>
-              </tr>
-
             <td colspan="2">
               <div class="form-group">
                   <%= f.label :review %>
+                  <%= f.hidden_field :course_id, :value => @cid %>
+                  <%= f.hidden_field :review_id, :value => @rid %>
                   <%= f.hidden_field :user_id, :value => current_user.id %>
                   <%= f.text_area :review, :class => "form-control" %>
               </div>
