@@ -10,11 +10,15 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
+    @courses = Course.all.order('course_name')
   end
 
   # GET /reviews/new
   def new
     @review = Review.new
+    
+    @departments = Department.all.order('d_name')
+    @courses = Course.all.order('course_name')
   end
 
   # GET /reviews/1/edit

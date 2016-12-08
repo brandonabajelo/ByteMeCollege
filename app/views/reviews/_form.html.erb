@@ -13,32 +13,12 @@
 
   <div class="field">
     <%= f.label :course_id %>
-    <%= f.number_field :course_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :review_id %>
-    <%= f.number_field :review_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
+    <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
   </div>
 
   <div class="field">
     <%= f.label :review %>
     <%= f.text_area :review %>
-  </div>
-
-  <div class="field">
-    <%= f.label :thumb_up %>
-    <%= f.number_field :thumb_up %>
-  </div>
-
-  <div class="field">
-    <%= f.label :thumb_down %>
-    <%= f.number_field :thumb_down %>
   </div>
 
   <div class="actions">
