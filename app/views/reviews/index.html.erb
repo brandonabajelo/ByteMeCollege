@@ -69,7 +69,7 @@
           </td>
 
         <td>
-          <%= link_to 'Reply Review', new_review_path(rid: review.id), {:id => 'add_row', :class => 'btn btn-default'} %> 
+          <%= link_to 'Reply', new_review_path(rid: review.id), {:id => 'add_row', :class => 'btn btn-default'} %> 
         </td>
       
         <td>
@@ -89,7 +89,7 @@
       </table>
     </div>
   </div>
-  <%= link_to 'Add an new Review', new_review_path(cid: @cid), {:id => 'add_row', :class => 'btn btn-default'} %>
+  <%= link_to 'Add a new Review', new_review_path(cid: @cid), {:id => 'add_row', :class => 'btn btn-default'} %>
 </div>
 <br>
 <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %></br>
