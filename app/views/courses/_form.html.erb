@@ -14,7 +14,7 @@
 <form id="survey-form" class="main-form">
 
     <div class="survey-section mat-shadow">
-      <h2 class="sub-header">Edit Course</h2>
+      <h2 class="sub-header">Course</h2>
 
       <table class="profile-table">
         <tbody>
@@ -30,7 +30,7 @@
             <td colspan="2">
             <div class="form-group">
             <%= f.label :department_id %>
-            <%= collection_select(:course, :department_id, @departments, :id, :d_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the department of this post'}) %>
+            <%= collection_select(:course, :department_id, @departments, :id, :d_name, {}, {:class => 'black', include_blank: true, :multiple => false, :prompt => 'Please select the department of this post'}) %>
               </div>
               </tr>
 
@@ -71,6 +71,13 @@
             <div class="actions">
             <%= f.submit "Update Course", class: 'btn btn-default'  %>
             </div>
+            </td>
+          </tr>
+
+                    <!-- Back -->
+           <tr>
+            <td colspan="2">
+            <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %>
             </td>
           </tr>
 
