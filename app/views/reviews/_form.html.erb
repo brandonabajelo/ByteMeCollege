@@ -10,24 +10,6 @@
       </ul>
     </div>
   <% end %>
-
-<<<<<<< HEAD
-  <div class="field">
-    <%= f.label :course_id %>
-    <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
-  </div>
-
-  <div class="field">
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.label :review %>
-    <%= f.text_area :review %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-=======
 <form id="survey-form" class="main-form">
 
     <div class="survey-section mat-shadow">
@@ -47,13 +29,14 @@
             <td colspan="2">
             <div class="form-group">
             <%= f.label :course_id %>
-            <%= collection_select(:course, :department_id, @departments, :id, :d_name, {}, {:class => 'black', include_blank: true, :multiple => false, :prompt => 'Please select the department of this post'}) %>
+            <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
               </div>
               </tr>
 
             <td colspan="2">
               <div class="form-group">
                   <%= f.label :review %>
+                  <%= f.hidden_field :user_id, :value => current_user.id %>
                   <%= f.text_area :review, :class => "form-control" %>
               </div>
 
@@ -73,11 +56,8 @@
             <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %>
             </td>
           </tr>
-
         </tbody>
       </table>
     </div>
   </form>
-
 <% end %>
->>>>>>> 1a3ae1d12fd504e093ad522a0e749e8651cb7512
