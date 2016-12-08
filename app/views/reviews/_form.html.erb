@@ -11,17 +11,55 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :course_id %>
-    <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
-  </div>
+<form id="survey-form" class="main-form">
 
-  <div class="field">
-    <%= f.label :review %>
-    <%= f.text_area :review %>
-  </div>
+    <div class="survey-section mat-shadow">
+      <h2 class="sub-header">Review</h2>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <table class="profile-table">
+        <tbody>
+
+          <!-- Validate user input -->
+          <tr>
+            <td colspan="3">
+              <input class="input" type="hidden" name="_csrf" value="csrfTokenGoesHereFromServer">
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+            <div class="form-group">
+            <%= f.label :course_id %>
+            <%= collection_select(:course, :department_id, @departments, :id, :d_name, {}, {:class => 'black', include_blank: true, :multiple => false, :prompt => 'Please select the department of this post'}) %>
+              </div>
+              </tr>
+
+            <td colspan="2">
+              <div class="form-group">
+                  <%= f.label :review %>
+                  <%= f.text_area :review, :class => "form-control" %>
+              </div>
+
+          </tr>
+          <!-- Submit -->
+          <tr>
+            <td colspan="2">
+            <div class="actions">
+            <%= f.submit "Create Review", class: 'btn btn-default'  %>
+            </div>
+            </td>
+          </tr>
+
+                    <!-- Back -->
+           <tr>
+            <td colspan="2">
+            <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </form>
+
 <% end %>
