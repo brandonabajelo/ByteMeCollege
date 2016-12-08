@@ -32,6 +32,9 @@
             <th class="text-center">
               Thumbs down
             </th>
+            <th colspan="5" class="text-center">
+              Action
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -73,16 +76,32 @@
           <%= review.thumb_down %>
             </div>
           </td>
-          <td><%= link_to 'Show', review, {:id => 'add_row', :class => 'btn btn-default'} %></td>
-        <td><%= link_to 'Edit', edit_review_path(review), {:id => 'add_row', :class => 'btn btn-default'} %></td>
-        <td><%= link_to 'Destroy', review, :id => 'add_row', :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td>
+          <div class="text-center">
+          <%= review.thumb_down %>
+            </div>
+          </td>
+
+        <td>
+          <%= link_to 'New Review', new_review_path, {:id => 'add_row', :class => 'btn btn-default'} %> 
+        </td>
+
+          <td>
+          <%= link_to 'Show', review, {:id => 'add_row', :class => 'btn btn-default'} %>
+          </td>
+        <td>
+        <%= link_to 'Edit', edit_review_path(review), {:id => 'add_row', :class => 'btn btn-default'} %>
+          
+        </td>
+        <td>
+        <%= link_to 'Destroy', review, :id => 'add_row', :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %> 
+        </td>
         </tr>
         <% end %>    
         </tbody>
       </table>
     </div>
   </div>
-  <%= link_to 'New Review', new_review_path, {:id => 'add_row', :class => 'btn btn-default'} %>
 </div>
 <br>
 <%= link_to '', :back, {:class => 'glyphicon glyphicon-circle-arrow-left'} %></br>
