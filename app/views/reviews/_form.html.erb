@@ -29,7 +29,7 @@
             <td colspan="2">
             <div class="form-group">
             <%= f.label :course_id %>
-            <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
+            <%= collection_select(:review, :course_id, @courses, :id, :course_name, {}, {:class => 'black', include_blank: true, :multiple => false, :prompt => 'Please select the course'}) %>
               </div>
               </tr>
 
